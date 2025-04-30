@@ -6,29 +6,25 @@ import os
 # Current directory
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-
-# API Keys - Replace with secure methods in production
 GEMINI_API_KEY = "your_gemini_api_key_here"  # From chatbot.py
 
 ELEVEN_LABS_API_KEY = "your_eleven_labs_api_key_here"
 
 
-
-
 # Whisper model settings
-WHISPER_MODEL_NAME = "medium"  # From whiper.py
-USE_GPU_FOR_WHISPER = True     # Force GPU usage for Whisper
-WHISPER_MODEL_PATH = os.path.join(CURRENT_DIR, "medium.pt")  # Direct path to model file
+WHISPER_MODEL_NAME = "medium"  
+USE_GPU_FOR_WHISPER = True     
+WHISPER_MODEL_PATH = os.path.join(CURRENT_DIR, "medium.pt")  
 
 # Voice detection settings
-ENERGY_THRESHOLD = 0.015  # From whiper.py
-SILENCE_THRESHOLD = 1.0  # Seconds of silence to consider speech ended
+ENERGY_THRESHOLD = 0.015  
+SILENCE_THRESHOLD = 1.0  
 
 # Audio settings
 SAMPLE_RATE = 16000
 CHUNK_SIZE = 1024
 CHANNELS = 1
-FORMAT = "paInt16"  # For PyAudio
+FORMAT = "paInt16"  
 
 # Default voice ID for ElevenLabs (will be overridden by user selection)
 DEFAULT_VOICE_ID = ""  # Will be selected by user in the app
